@@ -95,6 +95,7 @@ class _SettingsState extends State<Settings> {
       height_msg='Valid height';
       print(height_msg);
     }
+    return null;
   }
 
   //Function for testing if height textfield is changed for the first time

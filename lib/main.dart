@@ -621,6 +621,7 @@ class StartScreen extends State<MyHomePage> with WidgetsBindingObserver{
       height_msg='Valid height';
       print(height_msg);
     }
+    return null;
   }
 
   //Function for testing if height textfield is changed for the first time
@@ -646,7 +647,7 @@ class StartScreen extends State<MyHomePage> with WidgetsBindingObserver{
     late ConnectivityResult result;
     try {
       result = await connectivity.checkConnectivity();
-    } on PlatformException catch (e) {
+    } on PlatformException {
       //developer.log('Couldn\'t check connectivity status', error: e);
       return;
     }
@@ -1004,28 +1005,28 @@ class StartScreen extends State<MyHomePage> with WidgetsBindingObserver{
   //function for inserting to the database the pressure data
   void insert_pressure_toDb() async{
     date = DateTime.now().millisecondsSinceEpoch;
-    await SqlDatabase.instance.insert_pressure(date,pressure!,0);
+    await SqlDatabase.instance.insert_pressure(date,pressure,0);
     //print('KOMPLE TO PRESS');
   }
 
   //function for inserting to the database the acceleration data
   void insert_acc_toDb() async{
     date = DateTime.now().millisecondsSinceEpoch;
-    await SqlDatabase.instance.insert_acc(date, ax!, ay!, az!, 0);
+    await SqlDatabase.instance.insert_acc(date, ax, ay, az, 0);
     //print('KOMPLE TO ACC');
   }
 
   //function for inserting to the database the gyroscope data
   void insert_gyro_toDb() async{
     date = DateTime.now().millisecondsSinceEpoch;
-    await SqlDatabase.instance.insert_gyro(date, gx!, gy!, gz!, 0);
+    await SqlDatabase.instance.insert_gyro(date, gx, gy, gz, 0);
     //print('KOMPLE TO GYRO');
   }
 
   //function for inserting to the database the magnetometer data
   void insert_magn_toDb() async{
     date = DateTime.now().millisecondsSinceEpoch;
-    await SqlDatabase.instance.insert_magn(date,mx!,my!,mz!,0);
+    await SqlDatabase.instance.insert_magn(date,mx,my,mz,0);
     //print('KOMPLE TO MAGN');
   }
 

@@ -81,6 +81,7 @@ class LoginState extends State<Login> {
       mail_msg='Valid email';
       print(mail_msg);
     }
+    return null;
   }
 
   //Function for displaying the correct error message on password textfield
@@ -98,6 +99,7 @@ class LoginState extends State<Login> {
       pass_msg='Valid password';
       print(pass_msg);
     }
+    return null;
   }
 
   //Function for testing if mail textfield is changed for the first time

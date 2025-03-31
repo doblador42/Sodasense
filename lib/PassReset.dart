@@ -58,6 +58,7 @@ class _PassResetState extends State<PassReset> {
       _msg='Valid email';
       print(_msg);
     }
+    return null;
   }
 
   //Function for testing if textfield is changed for the first time
