@@ -1,0 +1,2 @@
+C:/Users/legio/Documents/GitHub/Sodasense/android/app/.cxx/Debug/0t3l1g10/armeabi-v7a/CMakeFiles/edit_cache.dir
+C:/Users/legio/Documents/GitHub/Sodasense/android/app/.cxx/Debug/0t3l1g10/armeabi-v7a/CMakeFiles/rebuild_cache.dir
